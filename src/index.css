@@ -1,0 +1,24 @@
+.custom-font {
+  font-family: 'CustomFont', sans-serif;
+  font-size: 70px;
+  line-height: 44px;
+}
+.custom-font2 {
+  font-family: 'CustomFont2', sans-serif;
+  font-size: 22px;
+}
+.label {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 20px;
+  margin-top: 24px;
+}
+
+.input {
+  border-radius: 8px;
+  border-width: 2px;
+  width: 400px;
+  height: 56px;
+  margin-top: 8px;
+  padding: 8px;
+}
