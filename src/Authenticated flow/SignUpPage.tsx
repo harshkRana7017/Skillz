@@ -6,6 +6,7 @@ import { Form, Formik } from 'formik';
 import FormikInput from 'shared-resources/components/Input/FormikInput';
 import Button from 'shared-resources/components/Button/Button';
 import * as Yup from 'yup';
+import { Link } from 'react-router-dom';
 
 type SignUpPageProps = {
   isLogin?: boolean;
@@ -84,8 +85,8 @@ const SignUpPage: FC<SignUpPageProps> = () => {
                       {(loading && 'Please wait..') || 'Sign Up'}
                     </Button>
 
-                    <a
-                      href='www.youtube.com'
+                    <Link
+                      to='/signin'
                       className={`text-xl underline mb-2 ${
                         loading
                           ? 'text-gray-400 pointer-events-none cursor-not-allowed'
@@ -93,7 +94,7 @@ const SignUpPage: FC<SignUpPageProps> = () => {
                       }`}
                     >
                       Already have an account?
-                    </a>
+                    </Link>
                   </div>
                 </Form>
               </div>
