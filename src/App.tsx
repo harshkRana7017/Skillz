@@ -1,4 +1,4 @@
-import SignUpPage from 'Authenticated flow/SignUpPage';
+import LoginPage from 'Authenticated flow/LoginPage';
 import React from 'react';
 import { Provider } from 'react-redux';
 import store from 'store';
@@ -6,7 +6,7 @@ import store from 'store';
 const App: React.FC = () => (
   <Provider store={store}>
     <div>
-      <SignUpPage />
+      <LoginPage />
     </div>
   </Provider>
 );
