@@ -43,16 +43,26 @@ const SignUpPage: FC<SignUpPageProps> = () => {
               <div>
                 <Form>
                   <h1 className='label'>Name</h1>
-                  <FormikInput name='Name' className='input  text-2xl ' />
+                  <FormikInput
+                    disabled={loading}
+                    name='Name'
+                    className='input  text-2xl '
+                  />
                   <h1 className='label '>Email Address</h1>
-                  <FormikInput name='Email' className='input text-2xl ' />
+                  <FormikInput
+                    disabled={loading}
+                    name='Email'
+                    className='input text-2xl '
+                  />
                   <h1 className='label '>Mobile Number</h1>
                   <FormikInput
+                    disabled={loading}
                     name='phoneNumber'
                     className='input   text-2xl '
                   />
                   <h1 className='label'>Gender</h1>
                   <Radio
+                    disabled={loading}
                     name='gender'
                     selected={radio}
                     options={[
@@ -64,18 +74,24 @@ const SignUpPage: FC<SignUpPageProps> = () => {
                       setRadio(val);
                     }}
                   />
-                  <div className='flex space-x-3 items-end'>
+                  <div className='flex space-x-3 items-end '>
                     <Button
                       type='submit'
-                      className='rounded-lg w-32 text-white text-2xl mt-10'
+                      className='rounded-lg w-32 py-2 text-white text-2xl mt-10'
                     >
                       {(loading && 'Please wait..') || 'Sign Up'}
                     </Button>
-                    {!loading && (
-                      <a href='www.youtube.com' className='text-xl underline'>
-                        Already have an account?
-                      </a>
-                    )}
+
+                    <a
+                      href='www.youtube.com'
+                      className={`text-xl underline mb-2 ${
+                        loading
+                          ? 'text-gray-400 pointer-events-none cursor-not-allowed'
+                          : ''
+                      }`}
+                    >
+                      Already have an account?
+                    </a>
                   </div>
                 </Form>
               </div>
