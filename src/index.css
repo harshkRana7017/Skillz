@@ -22,3 +22,9 @@
   margin-top: 8px;
   padding: 8px;
 }
+.gray {
+  background-color: #DDDDDD;
+}
+.underline {
+  text-decoration: underline;
+}
