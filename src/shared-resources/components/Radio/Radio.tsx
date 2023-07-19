@@ -9,6 +9,7 @@ export interface RadioProps {
   onFocus?: (e: FocusEvent<HTMLInputElement>) => void;
   selected?: string | null;
   name?: string;
+  disabled?: boolean;
 }
 
 const Radio: FC<RadioProps> = ({
@@ -18,11 +19,13 @@ const Radio: FC<RadioProps> = ({
   selected,
   onBlur,
   onFocus,
+  disabled,
 }) => (
   <div className='flex gap-x-4 mt-2 w-full'>
     {options.map((item) => (
       <div key={item.value} className='flex items-center justify-between'>
         <input
+          disabled={disabled}
           id={item.value}
           name={name}
           type='radio'

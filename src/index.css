@@ -21,4 +21,17 @@
   height: 56px;
   margin-top: 8px;
   padding: 8px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.gray {
+  background-color: #dddddd;
+}
+.underline {
+  text-decoration: underline;
+}
+.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
 }
