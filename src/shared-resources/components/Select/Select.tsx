@@ -5,6 +5,7 @@ import { SelectItemType } from 'shared-resources/types/SelectItems.type';
 import SelectControl from './SelectControl';
 import SelectItem from './SelectItem';
 import { SelectMultiContainer } from './SelectMultiValue';
+import 'index.css';
 
 export interface SelectProps {
   items: SelectItemType[];
@@ -63,7 +64,7 @@ const Select: React.FC<SelectProps> = (props: SelectProps) => {
   };
 
   return (
-    <div className='fixed w-[50%] top-16'>
+    <div>
       <ReactSelect
         value={currentValue}
         isMulti={isMulti}
@@ -81,6 +82,8 @@ const Select: React.FC<SelectProps> = (props: SelectProps) => {
           MultiValueContainer: SelectMultiContainer,
         }}
         isClearable={isClearable}
+        classNamePrefix='my-[4px] '
+        className='border-0 text-xl w-[398px] '
       />
     </div>
   );

@@ -27,7 +27,7 @@ const SignUpPage: FC<SignUpPageProps> = () => {
 
   return (
     <div className='flex items-center justify-center  '>
-      <div className=' w-[70%]  flex flex-col items-center'>
+      <div className=' w-[70%]  mt-32  flex flex-col items-center'>
         <Header />
         <div className='h-[500px] flex items-center justify-center'>
           {(!signedUp && (
