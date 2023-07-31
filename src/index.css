@@ -7,6 +7,13 @@
   font-family: 'CustomFont2', sans-serif;
   font-size: 22px;
 }
+.custom-font3 {
+  font-family: 'CustomFont2', sans-serif;
+  font-size: 36px;
+}
+.custom-react-select .select__control {
+    height: 5rem
+  }
 .label {
   font-weight: 600;
   font-size: 22px;
