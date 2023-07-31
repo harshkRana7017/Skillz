@@ -4,4 +4,5 @@
  */
 declare namespace React {
   type StatelessComponent<P> = React.FunctionComponent<P>;
+  type JSX<P> = React.JSXElementConstructor<P>;
 }
