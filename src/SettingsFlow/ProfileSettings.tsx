@@ -2,6 +2,7 @@ import Header from 'Common/Header';
 import React, { FC, memo, useState } from 'react';
 import Settings from './Settings';
 import Posts from './Posts';
+import TinyTakes from './TinyTakes';
 
 type ProfileSettingsProps = {};
 type TextBoxProps = {
@@ -52,6 +53,11 @@ const ProfileSettings: FC<ProfileSettingsProps> = () => {
             bgcolor={state === 'Posts' ? 'white' : 'slate'}
           />
           <TextBox
+            text='Tiny Takes'
+            setState={setState}
+            bgcolor={state === 'Tiny Takes' ? 'white' : 'slate'}
+          />
+          <TextBox
             text='Skills'
             setState={setState}
             bgcolor={state === 'Skills' ? 'white' : 'slate'}
@@ -70,6 +76,7 @@ const ProfileSettings: FC<ProfileSettingsProps> = () => {
         <div className='h-[800px] w-3/4 rounded-2xl bg-gray-100 p-16'>
           {state === 'Profile Settings' && <Settings />}
           {state === 'Posts' && <Posts />}
+          {state === 'Tiny Takes' && <TinyTakes />}
         </div>
       </div>
     </div>
